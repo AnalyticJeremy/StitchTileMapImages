@@ -42,3 +42,5 @@ The "urlFormat" parameter contains a standard .NET formatting string that tells 
 The `{0}` token will be replaced with the zoom level.  The `{1}` token will be replaced with the X coordinate, and the `{2}` token
 will be replaced with the Y coordinate.
 
+The example JSON above will create the map shown below and save it as a blob called "images/working/charlotte.png".
+![Map of Charlotte, NC, from OpenStreetMap.org](charlotte.png)
