@@ -11,8 +11,8 @@ public static string Run(StitchTileMapImageParameters parameters, CloudBlockBlob
     int[] yValues = GetSequence(parameters.topLeftCorner.y, parameters.bottomRightCorner.y);
 
     // Compute how many tiles will be in the output image
-    int tilesPerRow = xValues.Length + 1;
-    int tilesPerColumn = yValues.Length + 1;
+    int tilesPerRow = xValues.Length;
+    int tilesPerColumn = yValues.Length;
 
     // ASSUMPTION:  All tiles will be the same size.
     // Get the first tile image and use it's size to compute how big the output image will be.
