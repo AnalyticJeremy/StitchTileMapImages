@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "parameters",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "<YOUR INPUT AZURE QUEUE NAME>",
+      "connection": "<YOUR APP SETTING WITH A CONNECTION STRING TO AZURE STORAGE>"
+    },
+    {
+      "type": "blob",
+      "name": "outputBlob",
+      "path": "<YOUR AZURE BLOB CONTAINER NAME>/{outputPath}",
+      "connection": "<YOUR APP SETTING WITH A CONNECTION STRING TO AZURE STORAGE>",
+      "direction": "inout"
+    },
+    {
+      "type": "queue",
+      "name": "$return",
+      "queueName": "<YOUR OUTPUT AZURE QUEUE NAME>",
+      "connection": "<YOUR APP SETTING WITH A CONNECTION STRING TO AZURE STORAGE>",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
